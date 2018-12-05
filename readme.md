@@ -4,12 +4,13 @@ It mainly consists of 3 parts
 ```shell
 $ python clean_news.py
 ```
+The cleaned news is stored in './db/AAPL_clean_news_20170601_20180701.p'.
 
 2. Train deep learning model
 ```shell
 $ python dl2_cnn_read_pickle.py
 ```
-It is trained by 1 year news and the best accuracy is about 63%
+It is trained by 1 year news and the best accuracy is about 63%. The model is stored in './model/cnn_best_model.h5'.
 
 3. Prediction
 ```shell
