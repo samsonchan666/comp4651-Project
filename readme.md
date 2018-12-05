@@ -16,4 +16,6 @@ It is trained by 1 year news and the best accuracy is about 63%
 $ python prediction.py
 ```
 Predict the stock by news and by day
+
+
 Plot some graph
