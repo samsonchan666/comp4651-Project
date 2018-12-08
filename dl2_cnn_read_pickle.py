@@ -168,7 +168,7 @@ def main():
     x_test = train_data[-split:]
     y_test = _y_data[-split:]
     stop = EarlyStopping(patience=3)
-    checkpoint = ModelCheckpoint('cnn_best_model2.h5',
+    checkpoint = ModelCheckpoint('cnn_best_model.h5',
                                  verbose=0,
                                  monitor='val_acc',
                                  save_best_only=True)
