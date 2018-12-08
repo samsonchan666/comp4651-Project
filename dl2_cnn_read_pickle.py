@@ -13,7 +13,7 @@ from keras.utils.np_utils import to_categorical
 ticker = "AAPL"
 # {'AAPL', 'AMZN', 'MSFT', 'BAC', 'C', 'GOOG', 'JPM', 'INTC', 'GE', 'WMT' }
 time_shift = 4
-seed = 10
+seed = 30
 # 30, 33, 61
 # News and stock price file path
 news_path = './db/' + ticker + '_clean_news_20170601_20180701.p'
@@ -104,7 +104,7 @@ def main():
     Xs = []
     for sentence in x_data:
         Xs.append(word_tokenize(sentence))
-    vocab = sorted(reduce(lambda x, y: x | y, (set(words) for words in Xs)))
+    # vocab = sorted(reduce(lambda x, y: x | y, (set(words) for words in Xs)))
     final_vocab, word_idx = word_freq(Xs, 2)
     vocab_len = len(final_vocab)
     train_data = vectorize_sentences(Xs, word_idx, final_vocab, maxlen=maxlen)
@@ -168,7 +168,7 @@ def main():
     x_test = train_data[-split:]
     y_test = _y_data[-split:]
     stop = EarlyStopping(patience=3)
-    checkpoint = ModelCheckpoint('cnn_best_model.h5',
+    checkpoint = ModelCheckpoint('cnn_best_model2.h5',
                                  verbose=0,
                                  monitor='val_acc',
                                  save_best_only=True)
@@ -190,17 +190,19 @@ def main():
     print('====================================')
     '''
     from matplotlib import pyplot
-    pyplot.subplot(2, 1, 1)
-    pyplot.plot(history.history['val_loss'])
-    pyplot.subplot(2, 1, 2)
-    pyplot.plot(history.history['val_acc'])
+    ax = pyplot.subplot(2, 1, 1)
+    ax.set_title("Validation Loss")
+    ax.plot(history.history['val_loss'])
+    ax = pyplot.subplot(2, 1, 2)
+    ax.set_title("Validation Accuracy")
+    ax.plot(history.history['val_acc'])
     pyplot.show()
     '''
 
     # from keras.models import load_model
     # model.save('cnn_model.h5')
     # del model
-    # model = load_model('my_model.h5')
+    # model = load_model('cnn_best_model.h5')
 
 
 if __name__ == '__main__':

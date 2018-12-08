@@ -138,10 +138,13 @@ def main():
     font = {'size': 8}
     matplotlib.rc('font', **font)
     fig, ax = pyplot.subplots()
-    ax.plot(_date_list, prices_list, "#1f77b4", label="Stock Price")
+    lns1 = ax.plot(_date_list, prices_list, "#1f77b4", label="Stock Movement")
     ax2 = ax.twinx()
-    ax2.plot(news_date_list, news_score_list,
+    lns2 = ax2.plot(news_date_list, news_score_list,
              "#ff7f0e", label="Sentiment Score")
+    lns = lns1 + lns2
+    labs = [l.get_label() for l in lns]
+    ax.legend(lns, labs, loc=0)
     # _date_score = [[int(x[0].timestamp()*1000),
     #                x[1], x[2]] for x in date_score]
     # _date_score = sorted(_date_score, key=lambda x: x[0])
