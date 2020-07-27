@@ -20,6 +20,6 @@ Predict the stock movement by news and by day
 
 Plot some graph
 
-https://github.com/samsonchan666/comp4651-Project/blob/master/report/trend.png            |  -
+![1](https://github.com/samsonchan666/comp4651-Project/blob/master/report/trend.png)|  -
 :-------------------------:|:-------------------------:
-![1](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_acc.png) |![2](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_loss.png) 
+![2](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_acc.png) |![3](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_loss.png) 
