@@ -22,5 +22,5 @@ Plot some graph
 
 Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_acc.png)  |  ![](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_loss.png)
+![1](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_acc.png)|![2](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_loss.png)
 
