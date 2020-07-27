@@ -20,4 +20,7 @@ Predict the stock movement by news and by day
 
 Plot some graph
 
-![alt-text-1](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_acc.png "title-1") ![alt-text-2](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_loss.png "title-2")
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_acc.png)  |  ![](https://github.com/samsonchan666/comp4651-Project/blob/master/report/val_loss.png)
+
