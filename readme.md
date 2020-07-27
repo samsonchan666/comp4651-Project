@@ -1,4 +1,4 @@
-## Project for comp4651
+## Project for comp4651 (Stock movement prediction)
 It mainly consists of 3 parts
 1. Clean news
 ```shell
